@@ -1,7 +1,7 @@
 {
   "name": "ergast-graphql",
   "version": "1.0.0",
-  "description": "Hello world in GraphQL for first steps",
+  "description": "API Graphql - F1",
   "main": "build/server.js",
   "scripts": {
     "start": "node build/server.js",
@@ -16,14 +16,12 @@
   "keywords": [],
   "author": "Gustavo Fernandez <gwfernandez@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gwfernandez/ergast-graphql/issues"
-  },
-  "homepage": "https://github.com/gwfernandez/ergast-graphql#readme",
   "engines": {
     "node": "v12.16.2"
   },
   "dependencies": {
+    "apollo-datasource-rest": "^0.8.1",
+    "apollo-server": "^2.12.0",
     "apollo-server-express": "^2.6.1",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
