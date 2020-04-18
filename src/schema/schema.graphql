@@ -1,6 +1,7 @@
 type Query {
   seasons: [Season!]!,
-  racesByYear(year: String!): [Race!]!
+  races(year: String!): [Race!]!
+  race(year: String!, round: String!): Race
 }
 
 type Season {
