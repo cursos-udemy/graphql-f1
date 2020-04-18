@@ -1,7 +1,8 @@
 type Query {
   seasons: [Season!]!,
   races(year: String!): [Race!]!
-  race(year: String!, round: String!): Race
+  race(year: String!, round: String!): Race,
+  drivers: [Driver!]!,
 }
 
 type Season {
@@ -32,4 +33,14 @@ type Location {
   long: String!,
   locality: String!,
   country: String!
+}
+
+type Driver {
+  id: String!,
+  url: String!,
+  name: String!,
+  dateOfBirth: String,
+  nationality: String,
+  code: String,
+  permanentNumber: String
 }

@@ -22,7 +22,8 @@ async function init() {
         introspection: true,
         dataSources: () => ({
             seasons: new datasource.SeasonsData(),
-            races: new datasource.RacesData()
+            races: new datasource.RacesData(),
+            drivers: new datasource.DriversData()
         })
     });
     apolloServer.applyMiddleware({ app });

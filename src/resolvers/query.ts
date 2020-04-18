@@ -16,10 +16,15 @@ const query: IResolvers = {
             return await dataSources.races.getRace(year, round).then(
                 (data: any) => {
                     const races = data.MRData.RaceTable.Races;
-                    return (races) ? races[0]: null;
+                    return (races) ? races[0] : null;
                 }
             );
-        }
+        },
+        async drivers(_: void, __: any, { dataSources }) {
+            return await dataSources.drivers.getDrivers().then(
+                (data: any) => data.MRData.DriverTable.Drivers
+            );
+        },
     }
 };
 

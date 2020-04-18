@@ -14,6 +14,10 @@ const types: IResolvers = {
         id: parent => parent.circuitId,
         name: parent => parent.circuitName,
         location: parent => parent.Location
+    },
+    Driver: {
+        id: parent => parent.driverId,
+        name: parent => parent.givenName + ' ' + parent.familyName
     }
 };
 
