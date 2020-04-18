@@ -20,8 +20,8 @@ const query: IResolvers = {
                 }
             );
         },
-        async drivers(_: void, __: any, { dataSources }) {
-            return await dataSources.drivers.getDrivers().then(
+        async drivers(_: void, { limit, page }, { dataSources }) {
+            return await dataSources.drivers.getDrivers(limit, page).then(
                 (data: any) => data.MRData.DriverTable.Drivers
             );
         },

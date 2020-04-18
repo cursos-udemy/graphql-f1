@@ -1,8 +1,9 @@
 import { F1DataSource } from './f1-datasource'
 
 export class DriversData extends F1DataSource {
-    async getDrivers() {
-        return await this.get('drivers.json', {
+    async getDrivers(limit: number=10, page: number = 1) {
+        const offset = (page-1) * limit;
+        return await this.get(`drivers.json?limit=${limit}&offset=${offset}`, {
             cacheOptions: { ttl: 60 }
         });
     }
