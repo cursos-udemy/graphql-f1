@@ -1,3 +1,3 @@
 # ergast-graphql
 
-Introduce el contenido de tu README
+importante: 'graphql-tag-pluck' permite hacer el deploy en now

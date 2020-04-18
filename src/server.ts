@@ -5,7 +5,7 @@ import cors from 'cors';
 import schema from './schema';
 import { ApolloServer } from 'apollo-server-express';
 import { createServer } from 'http';
-import expressPlayGround from 'graphql-playground-middleware-express';
+import expressPlayground from 'graphql-playground-middleware-express';
 import { datasource } from './data';
 
 async function init() {
@@ -28,7 +28,7 @@ async function init() {
     });
     apolloServer.applyMiddleware({ app });
 
-    app.use('/', expressPlayGround({
+    app.use('/', expressPlayground({
         endpoint: '/graphql'
     }));
 
