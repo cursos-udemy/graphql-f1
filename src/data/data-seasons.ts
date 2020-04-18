@@ -1,4 +1,4 @@
-import { F1DataSource } from './datasource'
+import { F1DataSource } from './f1-datasource'
 
 export class SeasonsData extends F1DataSource {
     async getSeasons() {

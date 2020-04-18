@@ -21,7 +21,8 @@ async function init() {
         schema,
         introspection: true,
         dataSources: () => ({
-            seasons: new datasource.SeasonsData()
+            seasons: new datasource.SeasonsData(),
+            races: new datasource.RacesData()
         })
     });
     apolloServer.applyMiddleware({ app });
