@@ -34,7 +34,15 @@ const query: IResolvers = {
             return await dataSources.drivers.getDriversByRace(year, round).then(
                 (data: any) => data.MRData.DriverTable.Drivers
             );
-        }
+        },
+        async driver(_: void, { id }, { dataSources }) {
+            return await dataSources.drivers.getDriver(id).then(
+                (data: any) => {
+                    const drv = data.MRData.DriverTable.Drivers;
+                    return (drv) ? drv[0] : null;
+                }
+            );
+        },
     }
 };
 

@@ -20,4 +20,11 @@ export class DriversData extends F1DataSource {
             cacheOptions: { ttl: 60 }
         });
     }
+
+    async getDriver(id: string) {
+        return await this.get(`drivers/${id}.json`, {
+            cacheOptions: { ttl: 60 }
+        });
+    }
+
 }
